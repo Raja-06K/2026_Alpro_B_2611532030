@@ -1,22 +1,13 @@
-# 1. Baca kedua baris input, lalu pecah masing-masing dengan split()
-daftar_kelas = input().split()
-daftar_pengumpul = input().split()
+students = input("students: ").split()
+submit = input("submit: ").split()
 
-# 2. Gunakan set untuk membuang nomor ganda, lalu hitung jumlah yang sudah mengumpulkan
-set_kelas = set(daftar_kelas)
-set_pengumpul = set(daftar_pengumpul)
+set_students = set(students)
+set_submit = set(submit)
 
-jumlah_submitted = len(set_pengumpul)
+not_submitted = set_students - set_submit
 
-# 3. Gunakan operasi set (selisih / difference) untuk menghitung jumlah yang belum mengumpulkan
-belum_mengumpulkan = set_kelas - set_pengumpul
-jumlah_not_submitted = len(belum_mengumpulkan)
+print("Submitted: " + str(len(set_submit)) + " students")
+print("Not submitted: " + str(len(not_submitted)) + " students")
 
-# Cetak ringkasan sesuai format output
-print(f"Submitted: {jumlah_submitted} students")
-print(f"Not submitted: {jumlah_not_submitted} students")
-
-# 4. Telusuri daftar kelas dari depan. Cetak nomor yang tidak ada di set pengumpul
-for nomor in daftar_kelas:
-    if nomor not in set_pengumpul:
-        print(nomor)
+for not_submitted in set_students:
+    print(not_submitted)
