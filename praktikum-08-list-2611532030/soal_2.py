@@ -13,7 +13,7 @@ for item in notifications:
     if item == "promo":
         notifications.remove(item)
 print(notifications)
-
+ 
 #Soal 2c
 notes = ["intro", "list", "tuple"]
 shared = notes

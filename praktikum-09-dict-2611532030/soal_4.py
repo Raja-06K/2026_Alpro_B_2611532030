@@ -9,5 +9,6 @@ not_submitted = set_students - set_submit
 print("Submitted: " + str(len(set_submit)) + " students")
 print("Not submitted: " + str(len(not_submitted)) + " students")
 
-for not_submitted in set_students:
-    print(not_submitted)
+for name in students:
+    if name not in set_submit:
+        print(name)

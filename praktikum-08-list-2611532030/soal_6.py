@@ -1,7 +1,6 @@
-LAST_DIGIT = 0  # change to the last digit of your NIM
+LAST_DIGIT = 0  
 daily_limit = 30000 + LAST_DIGIT * 1000
 expenses = []
-# Write your code below
 
 for day in range(1, 8):
     amount = int(input(f"Day {day}: "))
@@ -18,12 +17,10 @@ for index in range(len(expenses)):
 
     total += value
 
-    # Pakai '>' ketat agar jika ada nilai sama, hari pertama tetap dipertahankan
     if value > highest_value:
         highest_value = value
         highest_day = day_num
 
-    # Jumlah hari di atas batas (>)
     if value > daily_limit:
         days_above_limit += 1
 
